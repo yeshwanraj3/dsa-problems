@@ -1,0 +1,40 @@
+
+class Solution {
+    int print2largest(int arr[], int n) {
+        int firstLargest = arr[0], secondLargest = -1;
+        for(int i = 1; i < arr.length; i++){
+                if(arr[i] > firstLargest){
+                    secondLargest = firstLargest;
+                    firstLargest = arr[i];
+    
+                }
+                if(arr[i] > secondLargest && arr[i] < firstLargest){
+                    secondLargest = arr[i];
+                }
+            
+        }
+        return secondLargest;
+    }
+    
+    
+    
+    
+    
+    // int print2largest(int arr[], int n) {
+    //     // code here
+    //     int fmax = -1;
+    //     int smax = -1;
+        
+    //     for (int i = 0; i <= n-1; i++) {
+            
+    //         if (fmax < arr[i]) {
+    //             smax = fmax;
+    //             fmax = arr[i];
+    //         }
+    //         else if (smax < arr[i] && fmax != arr[i]) {
+    //             smax = arr[i];
+    //         }
+    //     }
+    //     return smax;
+    // }
+}
